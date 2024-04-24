@@ -1,5 +1,7 @@
 ### IntelliJ IDEA ###
 *.jpg
+target
+.idea
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
