@@ -13,7 +13,8 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
     public MyFirstTelegramBot() {
         super(NAME, TOKEN);
     }
-/** DESCRIPTION: The void onUpdateEventReceived(Update u) method schedules the catbot's reaction when a Telegram user writes a message to it or performs another action on it.*/
+/** DESCRIPTION: The void onUpdateEventReceived(Update u) method schedules the catbot's
+ * reaction when a Telegram user writes a message to it or performs another action on it.*/
     @Override
     public void onUpdateEventReceived(Update update) {
         // TODO: escribiremos la funcionalidad principal del bot aquí
