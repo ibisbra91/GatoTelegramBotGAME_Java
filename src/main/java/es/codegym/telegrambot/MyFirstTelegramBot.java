@@ -24,6 +24,12 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
         if(getMessageText().contains("Hola")){
             sendTextMessageAsync("¡Hola! ¿Cuál es tu nombre?");
         }
+        if( getMessageText().contains("Me llamo")
+                || getMessageText().contains("Mi nombre es")
+                || getMessageText().contains("me llamo")
+                || getMessageText().contains("mi nombre es")){
+            sendTextMessageAsync("Es un placer. Yo Soy *Gato*. 🐱");
+        }
 
     }
 
