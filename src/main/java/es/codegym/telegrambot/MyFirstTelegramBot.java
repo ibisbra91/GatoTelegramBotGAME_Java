@@ -5,6 +5,12 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
+
+import java.util.Map;
+
+import static es.codegym.telegrambot.TelegramBotContent.STEP_1_TEXT;
+//import static java.util.Map.*;
+
 public class MyFirstTelegramBot extends MultiSessionTelegramBot {
 
     public static final String NAME = "C4tb0t_Gam3_1b1s_bot";
@@ -19,17 +25,10 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
     public void onUpdateEventReceived(Update update) {
         // TODO: escribiremos la funcionalidad principal del bot aquí
         if(getMessageText().equals("/start")){
-            sendTextMessageAsync("Hola, *soy Catbot* en _pañales_.");
+            sendTextMessageAsync(STEP_1_TEXT, Map.of("Hackear la nevera", "step_1_btn"));
         }
-        if(getMessageText().contains("Hola")){
-            sendTextMessageAsync("¡Hola! ¿Cuál es tu nombre?");
-        }
-        if( getMessageText().contains("Me llamo")
-                || getMessageText().contains("Mi nombre es")
-                || getMessageText().contains("me llamo")
-                || getMessageText().contains("mi nombre es")){
-            sendTextMessageAsync("Es un placer. Yo Soy *Gato*. 🐱");
-        }
+
+
 
     }
 
