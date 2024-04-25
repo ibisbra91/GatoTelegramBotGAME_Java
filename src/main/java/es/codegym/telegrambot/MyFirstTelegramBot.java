@@ -11,6 +11,7 @@ import java.util.Map;
 import static es.codegym.telegrambot.TelegramBotContent.STEP_1_TEXT;
 import static es.codegym.telegrambot.TelegramBotContent.STEP_2_TEXT;
 import static es.codegym.telegrambot.TelegramBotContent.STEP_3_TEXT;
+import static es.codegym.telegrambot.TelegramBotContent.STEP_4_TEXT;
 //import static java.util.Map.*;
 
 public class MyFirstTelegramBot extends MultiSessionTelegramBot {
@@ -40,8 +41,18 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
 
         if(getCallbackQueryButtonKey().equals("step_2_btn")){
             setUserGlory(20);
-            sendTextMessageAsync(STEP_3_TEXT, Map.of("Romper al robot aspiradora archienemigo", "step_3_btn"));
+            sendTextMessageAsync(STEP_3_TEXT, Map.of("Hackear al robot aspiradora archienemigo", "step_3_btn"));
         }
+
+        if(getCallbackQueryButtonKey().equals("step_3_btn")){
+            setUserGlory(30);
+            sendTextMessageAsync(STEP_4_TEXT,
+                    Map.of("Enviar al robor aspirador a traer comida", "step_4_btn",
+                           "Pasear sobre el robot aspiradora", "step_4_btn",
+                           "Huir del robot aspiradora", "step_4_btn"));
+        }
+
+
 
 
     }
