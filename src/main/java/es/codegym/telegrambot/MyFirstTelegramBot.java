@@ -9,6 +9,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import java.util.Map;
 
 import static es.codegym.telegrambot.TelegramBotContent.STEP_1_TEXT;
+import static es.codegym.telegrambot.TelegramBotContent.STEP_2_TEXT;
 //import static java.util.Map.*;
 
 public class MyFirstTelegramBot extends MultiSessionTelegramBot {
@@ -25,7 +26,15 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
     public void onUpdateEventReceived(Update update) {
         // TODO: escribiremos la funcionalidad principal del bot aquí
         if(getMessageText().equals("/start")){
+            setUserGlory(0);
             sendTextMessageAsync(STEP_1_TEXT, Map.of("Hackear la nevera", "step_1_btn"));
+        }
+
+        if(getCallbackQueryButtonKey().equals("step_1_btn")){
+            setUserGlory(20);
+            sendTextMessageAsync(STEP_2_TEXT, Map.of("¡Tomar 1 salchicha", "step_2_btn",
+                                                        "¡Tomar 1 pescado", "step_2_btn",
+                                                        "¡Tirar una lata de pepinillos", "step_2_btn"));
         }
 
 
