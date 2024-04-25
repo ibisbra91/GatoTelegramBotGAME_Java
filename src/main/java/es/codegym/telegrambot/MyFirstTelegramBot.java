@@ -10,6 +10,7 @@ import java.util.Map;
 
 import static es.codegym.telegrambot.TelegramBotContent.STEP_1_TEXT;
 import static es.codegym.telegrambot.TelegramBotContent.STEP_2_TEXT;
+import static es.codegym.telegrambot.TelegramBotContent.STEP_3_TEXT;
 //import static java.util.Map.*;
 
 public class MyFirstTelegramBot extends MultiSessionTelegramBot {
@@ -37,6 +38,10 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
                                                         "¡Tirar una lata de pepinillos", "step_2_btn"));
         }
 
+        if(getCallbackQueryButtonKey().equals("step_2_btn")){
+            setUserGlory(20);
+            sendTextMessageAsync(STEP_3_TEXT, Map.of("Romper al robot aspiradora archienemigo", "step_3_btn"));
+        }
 
 
     }
