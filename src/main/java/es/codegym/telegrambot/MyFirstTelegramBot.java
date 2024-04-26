@@ -58,8 +58,15 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
             setUserGlory(40);
             sendTextMessageAsync(STEP_5_TEXT, Map.of("Agarrar la GoPro", "step_5_btn"));
         }
+        if(getCallbackQueryButtonKey().equals("step_5_btn")){
+            setUserGlory(40);
+            sendTextMessageAsync(STEP_6_TEXT,
+                    Map.of("Grabar contenido para blog perruno 😋", "step_6_btn",
+                            "Grabar movimientos de Yoga gatuna apto para Golden Retriever", "step_6_btn",
+                            "Grabar maullidos para calmar bebés humanos", "step_6_btn"));
+        }
 
-     
+
 
 
     }
