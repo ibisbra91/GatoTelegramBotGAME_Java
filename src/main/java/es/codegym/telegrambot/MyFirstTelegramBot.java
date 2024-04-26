@@ -77,6 +77,11 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
                     Map.of("Recibir Aprendizaje de tu Dedicación y Esfuerzo!🌱 😋", "step_9_btn"));
         }
 
+        if(getCallbackQueryButtonKey().equals("step_9_btn")){
+            setUserGlory(50);
+            sendTextMessageAsync(FINAL_TEXT, Map.of());
+        }
+
 
     }
 
