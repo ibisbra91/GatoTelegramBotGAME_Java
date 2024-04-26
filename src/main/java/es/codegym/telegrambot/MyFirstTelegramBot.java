@@ -31,9 +31,9 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
 
         if(getCallbackQueryButtonKey().equals("step_1_btn")){
             setUserGlory(20);
-            sendTextMessageAsync(STEP_2_TEXT, Map.of("¡Tomar 1 salchicha", "step_2_btn",
-                                                        "¡Tomar 1 pescado", "step_2_btn",
-                                                        "¡Tirar una lata de pepinillos", "step_2_btn"));
+            sendTextMessageAsync(STEP_2_TEXT, Map.of("¡Tomar 1 salmón", "step_2_btn",
+                                                        "¡Tomar 1 merluza", "step_2_btn",
+                                                        "¡Tirar 1 lata de pepinillos", "step_2_btn"));
         }
 
 
@@ -46,7 +46,7 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
         if(getCallbackQueryButtonKey().equals("step_3_btn")){
             setUserGlory(30);
             sendTextMessageAsync(STEP_4_TEXT,
-                    Map.of("Enviar al robor aspirador a traer comida", "step_4_btn",
+                    Map.of("Enviar al robot aspiradora a traer comida", "step_4_btn",
                            "Pasear sobre el robot aspiradora", "step_4_btn",
                            "Huir del robot aspiradora", "step_4_btn"));
         }
@@ -67,7 +67,10 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
         }
 
 
-
+        if(getCallbackQueryButtonKey().equals("step_6_btn")){
+            setUserGlory(50);
+            sendTextMessageAsync(STEP_7_TEXT, Map.of("Hackear el passw del PC del humano", "step_7_btn"));
+        }
 
     }
 
