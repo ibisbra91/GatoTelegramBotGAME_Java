@@ -8,10 +8,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 import java.util.Map;
 
-import static es.codegym.telegrambot.TelegramBotContent.STEP_1_TEXT;
-import static es.codegym.telegrambot.TelegramBotContent.STEP_2_TEXT;
-import static es.codegym.telegrambot.TelegramBotContent.STEP_3_TEXT;
-import static es.codegym.telegrambot.TelegramBotContent.STEP_4_TEXT;
+import static es.codegym.telegrambot.TelegramBotContent.*;
 //import static java.util.Map.*;
 
 public class MyFirstTelegramBot extends MultiSessionTelegramBot {
@@ -52,7 +49,10 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
                            "Huir del robot aspiradora", "step_4_btn"));
         }
 
-
+        if(getCallbackQueryButtonKey().equals("step_4_btn")){
+            setUserGlory(30);
+            sendTextMessageAsync(STEP_5_TEXT, Map.of());
+        }
 
 
     }
