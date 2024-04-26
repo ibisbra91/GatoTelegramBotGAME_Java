@@ -71,6 +71,12 @@ public class MyFirstTelegramBot extends MultiSessionTelegramBot {
             setUserGlory(50);
             sendTextMessageAsync(STEP_7_TEXT, Map.of("Hackear el passw del PC del humano", "step_7_btn"));
         }
+        if(getCallbackQueryButtonKey().equals("step_7_btn")){
+            setUserGlory(50);
+            sendTextMessageAsync(STEP_8_TEXT,
+                    Map.of("Recibir Aprendizaje de tu Dedicación y Esfuerzo!🌱 😋", "step_9_btn"));
+        }
+
 
     }
 
